@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour {
     Vector3 newLoc;
@@ -14,7 +15,8 @@ public class PlayerMovement : MonoBehaviour {
 
     bool attacking;
     int attacks, maxAttacks;
-    int rechargeTimer = 0;
+    float rechargeTimer = 0;
+    public TMP_Text hpText;
 
 
     Vector2 topRightCorner, bottomLeftCorner;
@@ -30,6 +32,8 @@ public class PlayerMovement : MonoBehaviour {
 
         newLoc = transform.position;
         animator = GetComponentInChildren<Animator>();
+
+        attacks = 3;
         currentHealth = maxHealth;
         playerDamaged(0);
     }
@@ -58,7 +62,13 @@ public class PlayerMovement : MonoBehaviour {
         }
 
 
-    //Attack recharge
+        //Attack recharge
+        rechargeTimer += Time.deltaTime;
+        if (rechargeTimer > 15 && attacks < 3) {
+            rechargeTimer = 0;
+            attacks++;
+            hpText.SetText("Attacks: " + (attacks) + " / 3");
+        }
     }
 
     void Update() {
@@ -68,8 +78,10 @@ public class PlayerMovement : MonoBehaviour {
             newLoc = cam.ScreenToWorldPoint(Input.mousePosition);
             newLoc = new Vector3(Mathf.Clamp(newLoc.x, bottomLeftCorner.x, topRightCorner.x), Mathf.Clamp(newLoc.y, bottomLeftCorner.y, topRightCorner.y), z);
         }
-        if (Input.GetMouseButton(1) && !attacking) {
+        if (Input.GetMouseButtonDown(1) && !attacking && attacks > 0) {
             attacking = true;
+            attacks--;
+            hpText.SetText("Attacks: " + (attacks) + " / 3");
 
             float z = transform.position.z;
             newLoc = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -80,19 +92,32 @@ public class PlayerMovement : MonoBehaviour {
     void playerDamaged(int damage) {
         currentHealth -= damage;
         healthBar.BarValue = ((float)currentHealth/maxHealth) * 100;
+
+        if (currentHealth <= 0) {
+            AudioManager.instance.Play("Death");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         string tag = collision.gameObject.tag;
 
-        print(tag);
-        if (tag == "Missile")
-        {
-            playerDamaged(2);
+        if (attacking) {
+            if (tag == "Missile" || tag == "Shooter" || tag == "Deflector") {
+                Destroy(collision.gameObject);
+                AudioManager.instance.Play("Kill");
+            }
         }
-        else if (tag == "Shooter" || tag == "Deflector")
-        {
-            playerDamaged(1);
+        else {
+            if (tag == "Missile") {
+                playerDamaged(2);
+                AudioManager.instance.Play("Missile Hit");
+                Destroy(collision.gameObject);
+            }
+            else if (tag == "Shooter" || tag == "Deflector") {
+                playerDamaged(1);
+                AudioManager.instance.Play("Missile Hit");
+                Destroy(collision.gameObject);
+            }
         }
     }
 }

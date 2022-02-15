@@ -96,6 +96,7 @@ public class BulletScript : MonoBehaviour {
         if (collision.gameObject.tag == "Deflector") {
             findEndLocation();
             collision.gameObject.GetComponent<Deflectors>().setToSearch();
+            AudioManager.instance.Play("Missile Bounce");
         }
     }
 
