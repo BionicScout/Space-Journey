@@ -13,7 +13,6 @@ public class Waves : MonoBehaviour
     private void Awake() {
         currentWaveTime = waves[0].waveTime;
         waves[currentWave].spawnEnemies();
-        print("wave");
     }
 
     private void Update()
@@ -21,7 +20,6 @@ public class Waves : MonoBehaviour
         timer += Time.deltaTime;
 
         if (timer >= currentWaveTime) {
-            Debug.LogError("Wave " + (currentWave+1) + " Finshed");
             timer = 0;
 
             currentWave++;
@@ -35,7 +33,6 @@ public class Waves : MonoBehaviour
     }
 
     private void win() {
-        this.enabled = false;
-        print("Win");
+        SceneTraveller.instance.A_LoadScene(5);
     }
 }

@@ -118,7 +118,7 @@ public class Deflectors : MonoBehaviour
             return -1;
         }
         else if ((intersect.y > pos1.y && intersect.y > pos2.y) || (intersect.y < pos1.y && intersect.y < pos2.y)) {
-            Debug.Log("y of intersect is of segment");
+            //Debug.Log("y of intersect is of segment");
             return -1;
         }
 

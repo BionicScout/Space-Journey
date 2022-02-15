@@ -95,6 +95,7 @@ public class PlayerMovement : MonoBehaviour {
 
         if (currentHealth <= 0) {
             AudioManager.instance.Play("Death");
+            SceneTraveller.instance.A_LoadScene(4);
         }
     }
 
