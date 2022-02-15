@@ -6,24 +6,33 @@ public class Shooters : MonoBehaviour {
     public Vector3 onScreen, end;
 
     public float startToScreenSpeed, onScreenTime, screenToEndSpeed;
-    float currentTimer, shotTimer;
-    int moveState = 1; //StartToScreen = 1, onScreen = 2, screenToEnd = 3
+    float currentTimer, shotTimer, waitTimer;
+    int moveState = 0; //StartToScreen = 1, onScreen = 2, screenToEnd = 3
 
     public GameObject bulletTemplate;
 
-    public void setShooters(Vector3 startPos, Vector3 onScreen, Vector3 end, float startToScreenSpeed, float onScreenTime, float screenToEndSpeed) {
+    public void setShooters(Vector3 startPos, Vector3 onScreen, Vector3 end, float startToScreenSpeed, float onScreenTime, float screenToEndSpeed, float waitTimer) {
         transform.position = startPos;
         this.onScreen = onScreen;
         this.end = end;
         this.startToScreenSpeed = startToScreenSpeed;
         this.onScreenTime = onScreenTime;
         this.screenToEndSpeed = screenToEndSpeed;
+        this.waitTimer = waitTimer;
     }
 
 
     void FixedUpdate() {
+        if (moveState == 0) {
+            currentTimer += Time.deltaTime;
 
-        if (moveState == 1) {
+            if (currentTimer >= waitTimer) {
+                currentTimer = 0;
+                moveState++;
+            }
+
+        }
+        else if (moveState == 1) {
             transform.position = Vector3.MoveTowards(transform.position, onScreen, startToScreenSpeed * Time.deltaTime);
 
             if(Vector3.Distance(transform.position, onScreen) < 0.5) {

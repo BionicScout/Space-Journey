@@ -733,30 +733,96 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   waves:
-  - waveTime: 5
+  - waveTime: 20
     shooters:
-    - startPos: {x: 30, y: 50, z: 0}
-      onScreen: {x: 25, y: 40, z: 0}
-      end: {x: -10, y: 50, z: 0}
+    - startPos: {x: 15, y: 55, z: 0}
+      onScreen: {x: 10, y: 40, z: 0}
+      end: {x: -25, y: 55, z: 0}
+      waitTimer: 1
       startToScreenSpeed: 4
       onScreenTime: 5
       screenToEndSpeed: 4
-    deflectors:
-    - startPos: {x: 3, y: -5}
-      pos1: {x: 3, y: 2}
-      pos2: {x: 3, y: 48}
-      velocity: 5
-    shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
-    deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
-  - waveTime: 20
-    shooters:
-    - startPos: {x: 30, y: 50, z: 0}
+    - startPos: {x: 20, y: 55, z: 0}
+      onScreen: {x: 15, y: 40, z: 0}
+      end: {x: -20, y: 55, z: 0}
+      waitTimer: 2
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    - startPos: {x: 25, y: 55, z: 0}
+      onScreen: {x: 20, y: 40, z: 0}
+      end: {x: -25, y: 55, z: 0}
+      waitTimer: 3
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    - startPos: {x: 30, y: 55, z: 0}
       onScreen: {x: 25, y: 40, z: 0}
-      end: {x: -10, y: 50, z: 0}
+      end: {x: -10, y: 55, z: 0}
+      waitTimer: 4
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    - startPos: {x: 10, y: 55, z: 0}
+      onScreen: {x: 5, y: 40, z: 0}
+      end: {x: -30, y: 55, z: 0}
+      waitTimer: 0
       startToScreenSpeed: 4
       onScreenTime: 5
       screenToEndSpeed: 4
     deflectors: []
+    shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
+    deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
+  - waveTime: 20
+    shooters:
+    - startPos: {x: 15, y: -10, z: 0}
+      onScreen: {x: 5, y: 5, z: 0}
+      end: {x: 5, y: -10, z: 0}
+      waitTimer: 0
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    - startPos: {x: 15, y: -10, z: 0}
+      onScreen: {x: 10, y: 5, z: 0}
+      end: {x: 10, y: -10, z: 0}
+      waitTimer: 1
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    - startPos: {x: 15, y: -10, z: 0}
+      onScreen: {x: 15, y: 5, z: 0}
+      end: {x: 15, y: -10, z: 0}
+      waitTimer: 2
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    - startPos: {x: 15, y: -10, z: 0}
+      onScreen: {x: 20, y: 5, z: 0}
+      end: {x: 20, y: -10, z: 0}
+      waitTimer: 1
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    - startPos: {x: 15, y: -10, z: 0}
+      onScreen: {x: 25, y: 5, z: 0}
+      end: {x: 25, y: -10, z: 0}
+      waitTimer: 0
+      startToScreenSpeed: 4
+      onScreenTime: 5
+      screenToEndSpeed: 4
+    deflectors:
+    - startPos: {x: 5, y: 55}
+      pos1: {x: 5, y: 48}
+      pos2: {x: 15, y: 48}
+      velocity: 5
+    - startPos: {x: 25, y: 55}
+      pos1: {x: 25, y: 48}
+      pos2: {x: 15, y: 48}
+      velocity: 5
+    - startPos: {x: 10, y: 55}
+      pos1: {x: 10, y: 45}
+      pos2: {x: 25, y: 45}
+      velocity: 5
     shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
     deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
   - waveTime: 0

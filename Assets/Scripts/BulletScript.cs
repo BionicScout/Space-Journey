@@ -22,7 +22,7 @@ public class BulletScript : MonoBehaviour {
     // Update is called once per frame
     void FixedUpdate() {
         lastLoc = transform.position;
-        transform.position = Vector3.MoveTowards(transform.position, endLoc, 3f * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, endLoc, 6f * Time.deltaTime);
     }
 
     void findEndLocation() { //Find y in y = mx+b, where n is a location of screen
