@@ -24,8 +24,11 @@ public class Waves : MonoBehaviour
 
             currentWave++;
 
-            if (currentWave > waves.Length)
+            if (currentWave >= waves.Length)
+            {
+                Debug.Log("Win 1");
                 win();
+            }
 
             currentWaveTime = waves[currentWave].waveTime;
             waves[currentWave].spawnEnemies();
@@ -33,6 +36,7 @@ public class Waves : MonoBehaviour
     }
 
     private void win() {
+        Debug.Log("Win");
         SceneTraveller.instance.A_LoadScene(5);
     }
 }

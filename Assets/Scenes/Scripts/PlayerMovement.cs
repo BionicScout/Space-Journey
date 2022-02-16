@@ -33,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
         newLoc = transform.position;
         animator = GetComponentInChildren<Animator>();
 
-        attacks = 3;
+        attacks = 1;
         currentHealth = maxHealth;
         playerDamaged(0);
     }
@@ -52,22 +52,17 @@ public class PlayerMovement : MonoBehaviour {
             transform.rotation = Quaternion.RotateTowards(transform.rotation, rotateDir, 500 * Time.deltaTime);
         }
 
-        if (currentHealth <= 0) {
-            print("Dead");
-        }
-
         //attacking
         if (attacking && Vector3.Distance(newLoc, transform.position) < 1) {
             attacking = false;
         }
 
-
         //Attack recharge
         rechargeTimer += Time.deltaTime;
-        if (rechargeTimer > 15 && attacks < 3) {
+        if (rechargeTimer > 15 && attacks < 1) {
             rechargeTimer = 0;
             attacks++;
-            hpText.SetText("Attacks: " + (attacks) + " / 3");
+            hpText.SetText("Attacks: " + (attacks) + " / 1");
         }
     }
 
@@ -81,7 +76,7 @@ public class PlayerMovement : MonoBehaviour {
         if (Input.GetMouseButtonDown(1) && !attacking && attacks > 0) {
             attacking = true;
             attacks--;
-            hpText.SetText("Attacks: " + (attacks) + " / 3");
+            hpText.SetText("Attacks: " + (attacks) + " / 1");
 
             float z = transform.position.z;
             newLoc = cam.ScreenToWorldPoint(Input.mousePosition);
@@ -117,7 +112,6 @@ public class PlayerMovement : MonoBehaviour {
             else if (tag == "Shooter" || tag == "Deflector") {
                 playerDamaged(1);
                 AudioManager.instance.Play("Missile Hit");
-                Destroy(collision.gameObject);
             }
         }
     }

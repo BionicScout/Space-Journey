@@ -430,8 +430,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 175.18, y: 529.27}
-  m_SizeDelta: {x: 289.6416, y: 77.46}
+  m_AnchoredPosition: {x: 88.41, y: 296.1022}
+  m_SizeDelta: {x: 176.82, y: 81.2556}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &685278947
 MonoBehaviour:
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Attacks: 3 / 3'
+  m_text: 'Attacks: 1 / 1'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -480,8 +480,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 50
-  m_fontSizeBase: 50
+  m_fontSize: 30
+  m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -52.970062, y: 0, z: 0, w: 0}
+  m_margin: {x: -1.7424622, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -599,15 +599,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -639,11 +639,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -171
+      value: -97
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -45
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 224763426186284840, guid: 5eefba205a58c8c4a937c97b87c185a3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -797,10 +797,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 375, y: 667}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -885,7 +885,7 @@ MonoBehaviour:
     deflectors: []
     shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
     deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
-  - waveTime: 20
+  - waveTime: 15
     shooters:
     - startPos: {x: 15, y: 55, z: 0}
       onScreen: {x: 10, y: 40, z: 0}
@@ -925,7 +925,7 @@ MonoBehaviour:
     deflectors: []
     shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
     deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
-  - waveTime: 20
+  - waveTime: 15
     shooters:
     - startPos: {x: 15, y: -10, z: 0}
       onScreen: {x: 5, y: 5, z: 0}
@@ -977,7 +977,7 @@ MonoBehaviour:
       velocity: 5
     shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
     deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
-  - waveTime: 25
+  - waveTime: 15
     shooters:
     - startPos: {x: -5, y: 45, z: 0}
       onScreen: {x: 5, y: 45, z: 0}
@@ -1014,42 +1014,119 @@ MonoBehaviour:
       startToScreenSpeed: 4
       onScreenTime: 10
       screenToEndSpeed: 4
-    - startPos: {x: 30, y: 5, z: 0}
+    - startPos: {x: 33, y: 5, z: 0}
       onScreen: {x: 25, y: 5, z: 0}
-      end: {x: 30, y: 5, z: 0}
+      end: {x: 33, y: 5, z: 0}
       waitTimer: 0
       startToScreenSpeed: 4
       onScreenTime: 10
       screenToEndSpeed: 4
-    - startPos: {x: 30, y: 15, z: 0}
+    - startPos: {x: 33, y: 15, z: 0}
       onScreen: {x: 25, y: 15, z: 0}
-      end: {x: 30, y: 15, z: 0}
+      end: {x: 33, y: 15, z: 0}
       waitTimer: 0
       startToScreenSpeed: 4
       onScreenTime: 10
       screenToEndSpeed: 4
-    - startPos: {x: 30, y: 25, z: 0}
+    - startPos: {x: 33, y: 25, z: 0}
       onScreen: {x: 25, y: 25, z: 0}
-      end: {x: 30, y: 25, z: 0}
+      end: {x: 33, y: 25, z: 0}
       waitTimer: 0
       startToScreenSpeed: 4
       onScreenTime: 10
       screenToEndSpeed: 4
-    - startPos: {x: 30, y: 35, z: 0}
+    - startPos: {x: 33, y: 35, z: 0}
       onScreen: {x: 25, y: 35, z: 0}
-      end: {x: 30, y: 35, z: 0}
+      end: {x: 33, y: 35, z: 0}
       waitTimer: 0
       startToScreenSpeed: 4
       onScreenTime: 10
       screenToEndSpeed: 4
-    - startPos: {x: 30, y: 45, z: 0}
+    - startPos: {x: 33, y: 45, z: 0}
       onScreen: {x: 25, y: 45, z: 0}
-      end: {x: 30, y: 45, z: 0}
+      end: {x: 33, y: 45, z: 0}
       waitTimer: 0
       startToScreenSpeed: 4
       onScreenTime: 10
       screenToEndSpeed: 4
     deflectors: []
+    shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
+    deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
+  - waveTime: 22
+    shooters:
+    - startPos: {x: -5, y: 45, z: 0}
+      onScreen: {x: 10, y: 45, z: 0}
+      end: {x: -5, y: 45, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    - startPos: {x: -10, y: 35, z: 0}
+      onScreen: {x: 5, y: 35, z: 0}
+      end: {x: -10, y: 35, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    - startPos: {x: -10, y: 15, z: 0}
+      onScreen: {x: 5, y: 15, z: 0}
+      end: {x: -10, y: 15, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    - startPos: {x: -5, y: 5, z: 0}
+      onScreen: {x: 10, y: 5, z: 0}
+      end: {x: -5, y: 5, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    - startPos: {x: 35, y: 45, z: 0}
+      onScreen: {x: 20, y: 45, z: 0}
+      end: {x: 35, y: 45, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    - startPos: {x: 40, y: 35, z: 0}
+      onScreen: {x: 25, y: 35, z: 0}
+      end: {x: 40, y: 35, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    - startPos: {x: 40, y: 15, z: 0}
+      onScreen: {x: 25, y: 15, z: 0}
+      end: {x: 40, y: 15, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    - startPos: {x: 35, y: 5, z: 0}
+      onScreen: {x: 20, y: 5, z: 0}
+      end: {x: 35, y: 5, z: 0}
+      waitTimer: 1.5
+      startToScreenSpeed: 4
+      onScreenTime: 10
+      screenToEndSpeed: 4
+    deflectors:
+    - startPos: {x: -5, y: 25}
+      pos1: {x: 2, y: 25}
+      pos2: {x: 14, y: 25}
+      velocity: 5
+    - startPos: {x: 14, y: 52}
+      pos1: {x: 14, y: 48}
+      pos2: {x: 14, y: 25}
+      velocity: 5
+    - startPos: {x: 14, y: -5}
+      pos1: {x: 14, y: 25}
+      pos2: {x: 14, y: 2}
+      velocity: 5
+    - startPos: {x: 35, y: 25}
+      pos1: {x: 14, y: 25}
+      pos2: {x: 28, y: 25}
+      velocity: 5
     shooterPrefab: {fileID: 161008, guid: 236055fb118b89949bf4698f3928dd5b, type: 3}
     deflectorPrefab: {fileID: 163308, guid: 6ebfe353680ffd64ebfc2d27dad79525, type: 3}
 --- !u!4 &1640896647
