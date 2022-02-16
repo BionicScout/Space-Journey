@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour {
     int attacks, maxAttacks;
     float rechargeTimer = 0;
     public TMP_Text hpText;
+    public SpriteRenderer shield;
 
 
     Vector2 topRightCorner, bottomLeftCorner;
@@ -36,6 +37,8 @@ public class PlayerMovement : MonoBehaviour {
         attacks = 1;
         currentHealth = maxHealth;
         playerDamaged(0);
+
+        shield.enabled = false;
     }
 
     void FixedUpdate() {
@@ -55,6 +58,7 @@ public class PlayerMovement : MonoBehaviour {
         //attacking
         if (attacking && Vector3.Distance(newLoc, transform.position) < 1) {
             attacking = false;
+            shield.enabled = false;
         }
 
         //Attack recharge
@@ -77,6 +81,8 @@ public class PlayerMovement : MonoBehaviour {
             attacking = true;
             attacks--;
             hpText.SetText("Attacks: " + (attacks) + " / 1");
+
+            shield.enabled = true;
 
             float z = transform.position.z;
             newLoc = cam.ScreenToWorldPoint(Input.mousePosition);
